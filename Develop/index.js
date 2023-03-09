@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 // DEPENDENCIES 
 const inquirer = require('inquirer');
 const fs = require(`fs`);
 
-// TODO: Create an array of questions for user input
 // DATA 
 // Questions to be asked of the user in the prompt function below
 const questions = [
@@ -36,7 +34,7 @@ const questions = [
         type: 'list',
         message: 'What License is present?',
         name: 'license',
-        choices: ['The Unlicense', 'MIT', 'N/A']
+        choices: ['The Unlicense', 'MIT', 'Mozilla Public License 2.0', 'N/A']
     },
     {
         type: 'input',
@@ -60,53 +58,64 @@ const questions = [
     },
 ];
 
-
-
-// TODO: Create a function to write README file
 // FUNCTIONS 
+// Generates README file
 function writeToFile(fileName, data) {
     // create a new file; us fs 
-    fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log(data))
+    fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log(`Success!`))
 };
 
-// Need a function to generate markdown text from prompt answers 
+// Generates markdown text 
 function genMarkdown(answers) {
-    // Fill in badge functionality 
-    const markdown =
-        `# ${answers.title}
-        
-        ## Description
-        ${answers.description}
-        
-        ## Table of Contents
-        ${answers.contents}
-        
-        ## Installation
-        ${answers.installation}    
-        
-        ## Usage
-        ${answers.use}
-        
-        ## License
-        ${answers.license}
-        
-        ## Badges
-        ${answers.license}
-        
-        ## Features
-        ${answers.features}
-        
-        ## How to Contribute
-        ${answers.contribution}   
+    // Generates Badge Images based on License Chosen
+    if(answers.license === `The Unlicense`) {
+        badge = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+    } else if(answers.license === "MIT") {
+        badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    } else if(answers.license === "Mozilla Public License 2.0") {
+        badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+    } else if(answers.license === "N/A") {
+        badge = ``
+    };
 
-        ## Tests
-        ${answers.tests}
-        
-        ## Questions
-        ${answers.questions}
-    `
-    // Fill in the remaining items 
-    return markdown;
+    // Generates the markdown template w/ placeholders for answers inputs
+    const markdown =
+
+`# ${answers.title}
+
+${badge}
+
+## Description
+${answers.description}
+
+## Table of Contents
+${answers.contents}
+
+## Installation
+${answers.installation}    
+
+## Usage
+${answers.use}
+
+## License
+${answers.license}
+
+## Badges
+${answers.license}
+
+## Features
+${answers.features}
+
+## How to Contribute
+${answers.contribution}   
+
+## Tests
+${answers.tests}
+
+## Questions
+${answers.questions}`
+
+return markdown;
 };
 
 
@@ -120,9 +129,10 @@ inquirer
 // Use markdown function 
         const markdown = genMarkdown(answers);
         writeToFile(`README.md`, markdown);
-        console.log(`This should be markdown.`, markdown);
+    })
+    .catch((err) => {
+        console.log(`Got error!`, err)  
     });
 
-// Function call to initialize app
 // INITIALIZATION 
 init();
