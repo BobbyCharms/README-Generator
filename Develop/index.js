@@ -53,8 +53,18 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Open Questions and Contact Information?',
-        name: 'questions'
+        message: 'How to Contact You?',
+        name: 'contact'
+    },
+    {
+        type: 'input',
+        message: 'Github Username?',
+        name: 'github'
+    },
+    {
+        type: 'input',
+        message: 'Your Email Address?',
+        name: 'email'
     },
 ];
 
@@ -110,7 +120,12 @@ ${answers.contribution}
 ${answers.tests}
 
 ## Questions
-${answers.questions}`
+${answers.contact}
+
+Github: ${answers.github}
+
+Email: ${answers.email}
+`
 
 return markdown;
 };
