@@ -1,9 +1,9 @@
-# testing
+# This is a Generated Sample README.md
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
 
 ## Description
-test
+The function of this application is to be able to dynamically generate professional README.md files. The application takes in the user inputs, parses them, and then dynamically inserts the responses into a templated READE.md document. 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,29 +16,29 @@ test
 - [Questions](#questions)
 
 ## Installation
-fasd    
+Download the files. Be sure to install the NPMs related to the use of the application. In your CLI, run node index on the index.js file. You should be prompted to fill out multiple questions. The result will be a new README.md file.     
 
 ## Usage
-fas
+See installation instructions. 
 
 ## Credits
-dfa
+N/a
 
 ## License
-The Unlicense
+N/A
 
 ## Features
-asdf
+Key feature is being able to produce a templated README.md via the CLI. 
 
 ## How to Contribute
-asdfasdfasdfasd   
+Please reach out directly or submit a pull request.    
 
 ## Tests
-adfasd
+N/A
 
 ## Questions
-f
+Please use the below information to reach out with questions or comments! 
 
-Github: asdfasdfa
+Github: BobbyCharms
 
-Email: adsf
+Email: RobertCharming@gmail.com
