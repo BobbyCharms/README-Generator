@@ -17,11 +17,6 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enter a Table of Contents.',
-        name: 'contents'
-    },
-    {
-        type: 'input',
         message: 'Installation Instructions?',
         name: 'installation'
     },
@@ -29,6 +24,11 @@ const questions = [
         type: 'input',
         message: 'Enter How to Use.',
         name: 'use'
+    },
+    {
+        type: 'input',
+        message: 'Who did You Collaborate with?',
+        name: 'credits'
     },
     {
         type: 'list',
@@ -99,13 +99,23 @@ ${badge}
 ${answers.description}
 
 ## Table of Contents
-${answers.contents}
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Features](#features)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 ${answers.installation}    
 
 ## Usage
 ${answers.use}
+
+## Credits
+${answers.credits}
 
 ## License
 ${answers.license}
