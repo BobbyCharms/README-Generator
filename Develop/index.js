@@ -100,9 +100,6 @@ ${answers.use}
 ## License
 ${answers.license}
 
-## Badges
-${answers.license}
-
 ## Features
 ${answers.features}
 
