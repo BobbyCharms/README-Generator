@@ -1,9 +1,9 @@
-# This is a Generated Sample README.md
+# This is a sample README.md
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+There's not a badge here since I selected N/a. The README.md on the top level does have a badge though... here
 
 ## Description
-The function of this application is to be able to dynamically generate professional README.md files. The application takes in the user inputs, parses them, and then dynamically inserts the responses into a templated READE.md document. 
+This is a description. 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,29 +16,29 @@ The function of this application is to be able to dynamically generate professio
 - [Questions](#questions)
 
 ## Installation
-Download the files. Be sure to install the NPMs related to the use of the application.     
+N/a    
 
 ## Usage
-Open the index.js file in your CLI. Run node index.js.  You should be prompted to fill out multiple questions. The result will be a new README.md file.     
+Just fill out the prompts, duh. 
 
 ## Credits
-N/A
+Learned from the best. 
 
 ## License
-MIT
-
-## Features
-Key feature is being able to produce a templated README.md via the CLI. 
-
-## How to Contribute
-Please reach out directly or submit a pull request.       
-
-## Tests
 N/A
 
+## Features
+Key feature is that you get a README.md at the end of this question set. 
+
+## How to Contribute
+Just hit up that Github with a pull request.    
+
+## Tests
+N/a
+
 ## Questions
-Please use the below information to contact me. 
+See bobbycharms on Github.com
 
-Github: BobbyCharms
+Github: bobbycharms
 
-Email: RobertCharming@gmail.com 
+Email: robertcharming@gmail.com
